@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Times Frame | Precision Watchmaking</title>
+<meta name="description" content="Times Frame builds mechanical watches with Swiss-inspired precision. Explore automatic, chronograph and limited edition timepieces.">
+<meta property="og:title" content="Times Frame | Precision Watchmaking">
+<meta property="og:description" content="Engineered with precision. Designed with character.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/og.jpg">
+<link rel="canonical" href="https://www.your-domain.com/"><!-- CANONICAL PLACEHOLDER: change to your domain -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGO SPRITE: the Times Frame emblem, reused in navbar, preloader and footer -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+    <circle cx="24" cy="24" r="22"/>
+    <rect x="12" y="12" width="24" height="24" rx="1"/>
+    <path d="M24 24V15M24 24l6 4" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M24 2.5v3M45.5 24h-3M24 45.5v-3M2.5 24h3" stroke-linecap="round"/>
+    <circle cx="24" cy="24" r="1.6" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<div id="pre" aria-hidden="true">
+  <svg class="mark big"><use href="#mark"/></svg>
+  <div class="wm">TIMES FRAME</div>
+  <div class="bar"><i id="bar"></i></div><span id="pct">0%</span>
+</div>
+
+<header id="nav">
+  <a href="#top" class="logo" aria-label="Times Frame home">
+    <svg class="mark"><use href="#mark"/></svg>
+    <span><b>TIMES FRAME</b><small>Watchmakers</small></span>
+  </a>
+  <nav class="links" aria-label="Primary">
+    <a href="#featured">Collection</a><a href="#shop">Watches</a><a href="#new">New Arrivals</a><a href="#story">About</a><a href="#journal">Journal</a>
+  </nav>
+  <div class="icons">
+    <button id="bSearch" aria-label="Search">⌕</button>
+    <button id="bAcct" aria-label="Account">☺</button>
+    <button id="bWish" aria-label="Wishlist">♡<sup id="wCount">0</sup></button>
+    <button id="bCart" aria-label="Open bag">👜<sup id="cCount">0</sup></button>
+    <button id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+<div id="menu"><a href="#featured">Collection</a><a href="#shop">Watches</a><a href="#new">New Arrivals</a><a href="#story">About</a><a href="#journal">Journal</a></div>
+
+<main id="top">
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="vwrap" data-fallback>
+    <!-- ==============================
+         HERO VIDEO: ADD YOUR VIDEO HERE
+         Replace the path in SITE_CONFIG.heroVideo (script.js), or edit src below.
+         Optional poster: assets/images/hero-poster.jpg
+         ============================== -->
+    <video class="media" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-poster.jpg"><source src="hj.mp4" type="video/mp4"></video>
+  </div>
+  <div class="shade"></div>
+  <div class="hero-in">
+    <p class="kicker r1">The art of time</p>
+    <h1 class="split" aria-label="Precision without compromise."><span>Precision</span> <span>without</span> <span>compromise.</span></h1>
+    <p class="lead r3">Engineered with precision. Designed with character. Built to define every moment.</p>
+    <div class="cta r4"><a class="btn" href="#featured">Explore collection</a><a class="btn ghost" href="#story">Discover the brand</a></div>
+  </div>
+  <div class="scroll r5" aria-hidden="true"><i></i></div>
+</section>
+
+<div class="strip">Complimentary insured shipping over $1,500. Use code <b>FRAME10</b> for 10% off your first order.</div>
+
+<!-- ============ FEATURED ============ -->
+<section id="featured" class="sec">
+  <div class="head reveal"><h2>The Collection</h2><p>Four references that define the house. Each is assembled, regulated and tested by hand.</p></div>
+  <div class="grid g4" id="featGrid"></div>
+</section>
+
+<!-- ============ NEW ARRIVALS ============ -->
+<section id="new" class="sec dark">
+  <div class="head reveal"><h2>New Arrivals</h2><p>Fresh from the atelier.</p></div>
+  <div class="hscroll" id="newRow"></div>
+</section>
+
+<!-- ============ 3D SHOWCASE ============ -->
+<!-- ============ 3D SHOWCASE ============ -->
+<section class="show">
+
+  <div class="vwrap reveal clip" data-fallback>
+    <video
+      class="media"
+      id="showVideo"
+      muted
+      loop
+      playsinline
+      preload="metadata">
+
+      <source src="fg.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="txt reveal">
+    <h2>Watchmaking<br>reimagined.</h2>
+
+    <p>
+      Every component is modelled to a tolerance of two microns,
+      then finished by a watchmaker who knows it by heart.
+      See how a Times Frame movement comes together.
+    </p>
+  </div>
+
+</section>
+<!-- ============ WATCH BUILDER ============ -->
+<section id="builder" class="sec builder">
+
+  <div class="head reveal">
+    <h2>Build Your Watch</h2>
+    <p>Create your own Times Frame configuration.</p>
+  </div>
+
+  <div class="builder-grid">
+
+    <div class="builder-preview reveal">
+      <img id="bPrev" alt="Custom Times Frame watch preview">
+    </div>
+
+    <div class="builder-options reveal">
+      <div id="bOpts"></div>
+    </div>
+
+  </div>
+
+</section>
+<!-- ============ CATALOG ============ -->
+<section id="shop" class="sec">
+  <div class="head reveal"><h2>All Watches</h2></div>
+  <div class="tools">
+    <div id="chips" class="chips" role="group" aria-label="Category"></div>
+    <select id="fPrice" aria-label="Price"><option value="">Any price</option><option value="0-500">Under $500</option><option value="500-1000">$500 to $1,000</option><option value="1000-2500">$1,000 to $2,500</option><option value="2500-99999">$2,500+</option></select>
+    <select id="fSort" aria-label="Sort"><option value="feat">Featured</option><option value="new">Newest</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select>
+  </div>
+  <div class="grid g4" id="shopGrid"></div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section id="story" class="sec story">
+  <div class="vwrap reveal clip" data-fallback>
+    <!-- BRAND STORY VIDEO/IMAGE: ADD YOUR VIDEO HERE -->
+    <video class="media" muted loop playsinline autoplay preload="none" poster="assets/images/story.jpg"><source src="assets/videos/story.mp4" type="video/mp4"></video>
+  </div>
+  <div class="reveal">
+    <h2>Crafted for<br>generations.</h2>
+    <p>Times Frame began in a single-room workshop with one rule: build it so well it is handed down. A century later, nothing about that rule has changed.</p>
+    <div class="stats"><div><b data-count="100" data-suf="+">0</b><span>Years of craft</span></div><div><b data-count="48">0</b><span>Hours power reserve</span></div><div><b data-count="5" data-suf=" yr">0</b><span>Warranty</span></div></div>
+  </div>
+</section>
+
+<!-- ============ LIMITED ============ -->
+<section class="limited">
+  <div class="vwrap" data-fallback>
+    <!-- LIMITED EDITION VIDEO: ADD YOUR VIDEO HERE -->
+    <video class="media" muted loop playsinline autoplay preload="none" poster="assets/images/limited.jpg"><source src="assets/videos/limited.mp4" type="video/mp4"></video>
+  </div>
+  <div class="shade"></div>
+  <div class="in reveal"><p class="kicker">Limited edition</p><h2>Only 250 pieces.</h2><p>The Times Frame Tourbillon Noir. Numbered, certified, never reissued.</p>
+    <div class="cd" id="cd" aria-live="off"><div><b>00</b><span>Days</span></div><div><b>00</b><span>Hours</span></div><div><b>00</b><span>Minutes</span></div><div><b>00</b><span>Seconds</span></div></div>
+    <button class="btn" data-add="10">Reserve yours</button></div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="journal" class="sec">
+  <div class="head reveal"><h2>Worn and Trusted</h2></div>
+  <div class="rev" id="rev"><div class="track" id="revTrack"></div></div>
+  <div class="rctl"><button id="rPrev" aria-label="Previous review">←</button><div id="rDots"></div><button id="rNext" aria-label="Next review">→</button></div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="news reveal">
+  <h2>Join the Inner Circle</h2><p>Be the first to discover new collections, private releases and stories from our atelier.</p>
+  <form id="nForm" novalidate><input id="nMail" type="email" placeholder="Your email address" aria-label="Email address" required><button class="btn">Subscribe</button></form>
+  <p id="nMsg" role="status"></p>
+</section>
+</main>
+
+<footer>
+  <div class="fgrid">
+    <div><a href="#top" class="logo"><svg class="mark"><use href="#mark"/></svg><span><b>TIMES FRAME</b><small>Watchmakers</small></span></a><p>Mechanical watches built to outlast the moment.</p></div>
+    <div><h4>Collections</h4><a href="#shop">Automatic</a><a href="#shop">Chronograph</a><a href="#shop">Limited Edition</a></div>
+    <div><h4>Customer Care</h4><a href="#">Shipping &amp; Returns</a><a href="#">Warranty</a><a href="#">Contact</a></div>
+    <div><h4>Follow</h4><a href="#">Instagram</a><a href="#">YouTube</a><a href="#">Pinterest</a></div>
+  </div>
+  <div class="legal"><span>© 2026 Times Frame. All rights reserved.</span><span><a href="#">Privacy Policy</a> &nbsp; <a href="#">Terms &amp; Conditions</a></span></div>
+</footer>
+
+<!-- ============ OVERLAYS ============ -->
+<div id="shade" class="backdrop"></div>
+<div id="search" class="ov" role="dialog" aria-label="Search"><button class="x" data-close>✕</button><input id="sInput" placeholder="Search by name, category or collection" aria-label="Search watches"><div class="grid g4" id="sRes"></div></div>
+<div id="modal" class="ov mod" role="dialog" aria-modal="true" aria-label="Product details"><div class="box" id="mBox"></div></div>
+<aside id="drawer" role="dialog" aria-label="Your bag"><div class="dh"><h3>Your Bag</h3><button class="x" data-close aria-label="Close">✕</button></div><div id="items"></div><div class="dfoot" id="dfoot"></div></aside>
+<div id="toast" role="status"></div>
+<div id="cur" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
